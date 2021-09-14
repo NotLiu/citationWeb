@@ -5,13 +5,14 @@ import About from "./components/About";
 import Leaderboards from "./components/Leaderboards";
 import Credits from "./components/Credits";
 import React from "react";
-import ParallaxBG from "./components/Parallax"
+import ParallaxBG from "./components/Parallax";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <ParallaxBG />
+        {/* <ParallaxBG /> */}
+        {/* <img src="./img/citation2.png"></img> */}
         <div id="nav-bar">
           <div id="nav-name">
             <a href="/">Citation</a>
@@ -36,6 +37,7 @@ function App() {
         </div>
         <Switch>
           <Route exact path="/">
+            <Banner />
           </Route>
           <Route exact path="/about">
             <About />

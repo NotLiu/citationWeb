@@ -1,3 +1,7 @@
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+
 .App {
   text-align: center;
 }
@@ -44,10 +48,10 @@
     font-size: 2vw;
   }
   #nav-bar {
-    font-size: 18px;
+    font-size: 16px;
   }
   #nav-bar-nofix {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -190,61 +194,24 @@
 /* image banner */
 .image-banner {
   /* Set a specific height */
-  height: 100vh;
+  height: 110vh;
+  /* width: 105vw; */
+  transform: translateX(-3vw) translateY(-5vh);
 
   /* Position and center the image to scale nicely on all screens */
+  background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* overflow: hidden; */
   position: relative;
 }
 
-#image-banner1 {
-  background-image: url("./img/citation1.png");
-
-  /* Set a specific height */
-  height: 100vh;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-#image-banner2 {
-  background-image: url("./img/citation2.png");
-
-  /* Set a specific height */
-  height: 100vh;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-#image-banner3 {
-  background-image: url("./img/citation3.png");
-
-  /* Set a specific height */
-  height: 100vh;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-#image-banner4 {
-  background-image: url("./img/citation4.png");
-
-  /* Set a specific height */
-  height: 100vh;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.image-banner > img {
+  transform: translateX(-3vw) translateY(-5vh);
+  height: 100%;
+  /* width: 100%; */
+  /* overflow: hidden; */
   position: relative;
 }
 
