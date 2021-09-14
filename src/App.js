@@ -5,17 +5,13 @@ import About from "./components/About";
 import Leaderboards from "./components/Leaderboards";
 import Credits from "./components/Credits";
 import React from "react";
-import Parallax from "parallax-js";
+import ParallaxBG from "./components/Parallax"
 
 function App() {
-  const myRef = React.useRef(null);
-  const parallaxInstance = new Parallax(myRef, {
-    relativeInput: true,
-    hoverOnly: true,
-  });
   return (
     <Router>
       <div className="App">
+        <ParallaxBG />
         <div id="nav-bar">
           <div id="nav-name">
             <a href="/">Citation</a>
@@ -40,7 +36,6 @@ function App() {
         </div>
         <Switch>
           <Route exact path="/">
-            <Banner myRef={myRef} />
           </Route>
           <Route exact path="/about">
             <About />
