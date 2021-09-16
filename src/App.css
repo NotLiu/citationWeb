@@ -1,5 +1,5 @@
 body {
-  overflow: hidden; /* Hide scrollbars */
+  overflow: hidden;
 }
 
 .App {
@@ -314,4 +314,10 @@ body {
 
 .boardItem {
   list-style: none;
+}
+
+#audio {
+  position: fixed;
+  top: 85vh;
+  left: 75vw;
 }
