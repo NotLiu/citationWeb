@@ -9,33 +9,40 @@ export default function Leaderboards() {
     { value: "Level_One", label: "Level One" },
     { value: "Level_Two", label: "Level Two" },
     { value: "Level_Three", label: "Level Three" },
-    { value: "Total", label: "Total Score"},
+    { value: "Total", label: "Total Score" },
   ];
 
-  function handleQuery(query){
-    axios.get(query,{
-          proxy: {
-            host: "localhost",
-            port: 8080,
-          },
-        }).then(function(res){
-      console.log(res.data.board);
-      let board = res.data.board;
-      board = board.map((item, index) => {
-        return(
-          <li key={index} className="boardItem">
-            <span className = "boardName">{item.netID}</span>
-            <span className = "boardScore">{item.score}</span>
-          </li>
-        )
+  function handleQuery(query) {
+    console.log(query);
+    axios
+      .get(query, {
+        proxy: {
+          host: "localhost",
+          port: 8080,
+        },
       })
-      setLeaderboardList(board);
-    }).catch(function(err){console.log(err);});
+      .then(function (res) {
+        console.log(res.data);
+        console.log(res.data.board);
+        let board = res.data.board;
+        board = board.map((item, index) => {
+          return (
+            <li key={index} className="boardItem">
+              <span className="boardName">{item.netID}</span>
+              <span className="boardScore">{item.score}</span>
+            </li>
+          );
+        });
+        setLeaderboardList(board);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
   }
 
   function handleBoardType(e) {
     setBoardType(e.value);
-    handleQuery("/api/"+boardType);
+    handleQuery("/api/" + boardType);
   }
 
   return (
@@ -51,9 +58,7 @@ export default function Leaderboards() {
           ></Select>
           <span className="aboutTextAlignL">
             <h3 className="aboutTextAlignL">{boardType}</h3>
-            <ul id="dataList">
-            {leaderboardList}
-            </ul>
+            <ul id="dataList">{leaderboardList}</ul>
           </span>
         </div>
       </div>

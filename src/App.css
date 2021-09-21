@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  background-color: black;
 }
 
 .App {
@@ -193,24 +194,18 @@ body {
 
 /* image banner */
 .image-banner {
-  /* Set a specific height */
-  height: 110vh;
-  /* width: 105vw; */
-  transform: translateX(-3vw) translateY(-5vh);
-
-  /* Position and center the image to scale nicely on all screens */
-  background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* overflow: hidden; */
-  position: relative;
+  height: 100vh;
+  width: 100vw;
+  /* center image */
+  display: block;
+  margin: 0 auto;
+  /* width: 50%; */
 }
 
 .image-banner > img {
-  transform: translateX(-3vw) translateY(-5vh);
-  height: 100%;
-  /* width: 100%; */
+  transform: translateX(-5%);
+
+  width: 110%;
   /* overflow: hidden; */
   position: relative;
 }

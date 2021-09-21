@@ -18,24 +18,36 @@ export default function Banner() {
 
   return (
     <div>
-      <div id="scene" ref={sceneEl} data-limit-x="73" data-limit-y="40">
-        <div ref={sceneEl} data-depth="0.05" class="image-banner">
+      <div id="scene" ref={sceneEl} data-limit-x="65" data-limit-y="28">
+        <div ref={sceneEl} data-depth="0" class="image-banner">
           <img src="./img/citation1.png" />
         </div>
         <div ref={sceneEl} data-depth="0.6" class="image-banner">
           <img src="./img/citation2.png" />
         </div>
+        <div ref={sceneEl} data-depth="1.0" class="image-banner">
+          <img src="./img/citation-sparks2.png" />
+        </div>
         <div ref={sceneEl} data-depth="1.5" class="image-banner">
-          <img src="./img/citation3.png" />
+          <img src="./img/citation3-base.png" />
+        </div>
+        <div ref={sceneEl} data-depth="1.65" class="image-banner">
+          <img src="./img/citation3-pupil.png" />
         </div>
         <div ref={sceneEl} data-depth="1" class="image-banner">
           <img src="./img/citation4.png" />
+        </div>
+        <div ref={sceneEl} data-depth="1.3" class="image-banner">
+          <img src="./img/citation-sparks1.png" />
+        </div>
+        <div ref={sceneEl} data-depth="1.15" class="image-banner">
+          <img src="./img/citation4-cliff.png" />
         </div>
       </div>
       <div>
         <ReactAudioPlayer
           id="audio"
-          src="./sound/unethical_2.mp3"
+          src="./sound/menu.mp3"
           autoPlay={true}
           controls={true}
           loop={true}

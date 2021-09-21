@@ -29,26 +29,29 @@ const client = new MongoClient(uri, {
 
 //MONGODB QUERIES
 app.get("/api/Total", (request, response) => {
-  
-  client.connect((err)=>{
-    const collection =client.db("Leaderboard").collection("Total");
+  client.connect((err) => {
+    const collection = client.db("Leaderboard").collection("Total");
     console.log("CONNECTED TO DB");
-    
-    const data = collection.find().sort({score:-1}).toArray().then(res => {
-      client.close();
-      console.log(res);
-      response.status(200).end(
-        JSON.stringify({
-          board: res,
-        })
-      )
-    });
+
+    const data = collection
+      .find()
+      .sort({ score: -1 })
+      .toArray()
+      .then((res) => {
+        client.close();
+        console.log(res);
+        response.status(200).end(
+          JSON.stringify({
+            board: res,
+          })
+        );
+      });
   });
 });
 
 //for build
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + "/build/index.html"));
+  res.sendFile(path.join(__dirname + "/build/index.html"));
 });
 
 // //for dev
