@@ -2,9 +2,12 @@ import React from "react";
 import axios from "axios";
 import Select from "react-select";
 
-export default function Leaderboards() {
-  const [boardType, setBoardType] = React.useState("Total");
-  const [leaderboardList, setLeaderboardList] = React.useState([]);
+export default function Leaderboards({
+  boardType,
+  setBoardType,
+  leaderboardList,
+  setLeaderboardList,
+}) {
   const boards = [
     { value: "Level_One", label: "Level One" },
     { value: "Level_Two", label: "Level Two" },
@@ -47,7 +50,6 @@ export default function Leaderboards() {
 
   return (
     <div>
-      <div className="pageDiv" id="image-banner-leader" />
       <div id="aboutPage">
         <div id="leaderText">
           <h1 className="header">LEADERBOARDS</h1>

@@ -1,5 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: black;
 }
 
@@ -44,7 +48,7 @@ body {
 
 /* nav bar */
 /* nav bar */
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 700px) {
   #aboutme {
     font-size: 2vw;
   }
@@ -53,6 +57,24 @@ body {
   }
   #nav-bar-nofix {
     font-size: 16px;
+  }
+  #nav {
+    width: 91% !important;
+  }
+}
+
+@media only screen and (max-width: 700px) and (min-width: 500px) {
+  #aboutme {
+    font-size: 2vw;
+  }
+  #nav-bar {
+    font-size: 16px;
+  }
+  #nav-bar-nofix {
+    font-size: 16px;
+  }
+  #nav {
+    width: 83% !important;
   }
 }
 
@@ -72,6 +94,9 @@ body {
   #image-banner > img {
     height: initial !important;
   }
+  #nav {
+    width: 65% !important;
+  }
 }
 
 @media only screen and (max-width: 429px) and (min-width: 350px) {
@@ -90,6 +115,9 @@ body {
   #image-banner > img {
     height: initial !important;
   }
+  #nav {
+    width: 65% !important;
+  }
 }
 @media only screen and (max-width: 349px) {
   #aboutme {
@@ -106,6 +134,9 @@ body {
   }
   #image-banner > img {
     height: initial !important;
+  }
+  #nav {
+    width: 65%;
   }
 }
 
@@ -126,7 +157,7 @@ body {
   /* font-size :1.13em; */
 }
 
-#nav-bar:hover {
+/* #nav-bar:hover {
   animation: darken-nav 0.5s forwards;
 }
 
@@ -137,7 +168,7 @@ body {
   100% {
     background-color: rgb(28, 36, 36);
   }
-}
+} */
 
 #nav {
   display: inline-flex;
@@ -167,15 +198,18 @@ body {
   /* margin-right: 5em; */
 }
 
-#nav > li > a {
+.about-but {
   color: gainsboro;
+  background-color: transparent;
   text-decoration: none;
 
-  padding: 5% 12% 7%;
+  /* padding: 5% 12% 7%; */
   white-space: nowrap;
+  border-style: none;
+  font-weight: bold;
 }
 
-#nav > li > a:hover {
+.about-but:hover {
   border-radius: 6px;
   animation: fadein 0.5s forwards;
 }
@@ -194,7 +228,7 @@ body {
 
 /* image banner */
 .image-banner {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   /* center image */
   display: block;
@@ -210,58 +244,17 @@ body {
   position: relative;
 }
 
-#image-banner-about {
-  /* position: fixed; */
-  background-image: url("./img/hallwayscene.png");
-
-  /* Set a specific height */
-  height: 100vh;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  filter: blur(0px) brightness(70%);
-}
-
-#image-banner-credits {
-  /* position: fixed; */
-  background-image: url("./img/hallwayscene.png");
-
-  /* Set a specific height */
-  height: 100vh;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  filter: blur(0px) brightness(70%);
-}
-
-#image-banner-leader {
-  /* position: fixed; */
-  background-image: url("./img/hallwayscene.png");
-
-  /* Set a specific height */
-  height: 100vh;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  filter: blur(0px) brightness(70%);
-}
 /* end image banner */
 /* 
 .pageDiv {
   padding-top: 8vh;
 } */
+.postBannerPage {
+  padding-top: 10vh;
+}
 
 #aboutPage {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   width: 50vw;
   height: 100vh;
@@ -270,6 +263,7 @@ body {
   /* background-color: #11151b; */
   background-color: black;
   filter: none;
+  z-index: 5;
 }
 
 #aboutText {
@@ -277,8 +271,8 @@ body {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3em 4em;
-  width: 80%;
+  /* padding: 3em 4em; */
+  /* width: 80%; */
 }
 
 .aboutTextAlignL {
