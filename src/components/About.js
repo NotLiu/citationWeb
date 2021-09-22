@@ -5,6 +5,7 @@ export default function About() {
     <div>
       {/* <div className="pageDiv" id="image-banner-about" /> */}
       <div id="aboutPage">
+        <img src="./img/borders1.png" />
         <div id="aboutText">
           <h1 className="header">ABOUT CITATION</h1>
           <span className="aboutTextAlignL">

@@ -245,7 +245,7 @@ body {
 }
 
 /* end image banner */
-/* 
+/*a
 .pageDiv {
   padding-top: 8vh;
 } */
@@ -255,24 +255,32 @@ body {
 
 #aboutPage {
   /* position: absolute; */
+  position: relative;
+  display: block;
+  margin: 0 auto;
   top: 0;
-  width: 50vw;
+  width: 70vw;
   height: 100vh;
-  margin: 0 25vw;
+  /* margin: 0 25vw; */
 
   /* background-color: #11151b; */
-  background-color: black;
   filter: none;
   z-index: 5;
 }
+#aboutPage > img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
 
 #aboutText {
+  position: absolute;
   color: floralwhite;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  /* padding: 3em 4em; */
-  /* width: 80%; */
+  left: 24em;
+  top: 5em;
 }
 
 .aboutTextAlignL {
@@ -309,4 +317,5 @@ body {
   position: fixed;
   top: 85vh;
   left: 75vw;
+  z-index: 10;
 }

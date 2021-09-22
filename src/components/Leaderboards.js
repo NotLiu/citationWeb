@@ -51,7 +51,8 @@ export default function Leaderboards({
   return (
     <div>
       <div id="aboutPage">
-        <div id="leaderText">
+        <img src="./img/borders2.png" />
+        <div id="aboutText">
           <h1 className="header">LEADERBOARDS</h1>
           <Select
             options={boards}
