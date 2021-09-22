@@ -48,9 +48,9 @@ export default function Banner() {
         <ReactAudioPlayer
           id="audio"
           src="./sound/menu.mp3"
-          autoPlay={true}
           controls={true}
           loop={true}
+          volume={0.4}
         />
       </div>
     </div>

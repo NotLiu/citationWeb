@@ -1,3 +1,131 @@
+/* responsive design */
+/* nav bar */
+
+@media only screen and (min-width: 850px) {
+  #aboutText {
+    left: 35% !important;
+    top: 10% !important;
+  }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 700px) {
+  #aboutme {
+    font-size: 2vw;
+  }
+  #nav-bar {
+    font-size: 16px;
+  }
+  #nav-bar-nofix {
+    font-size: 16px;
+  }
+  #nav {
+    width: 91% !important;
+  }
+  #aboutText {
+    left: 12em !important;
+    top: 1em !important;
+    font-size: smaller !important;
+  }
+}
+
+@media only screen and (max-width: 700px) and (min-width: 500px) {
+  #aboutme {
+    font-size: 2vw;
+  }
+  #nav-bar {
+    font-size: 16px;
+  }
+  #nav-bar-nofix {
+    font-size: 16px;
+  }
+  #nav {
+    width: 83% !important;
+  }
+  #aboutText {
+    left: 9.5em !important;
+    top: 1em !important;
+    font-size: small !important;
+  }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 430px) {
+  #aboutme {
+    font-size: x-large;
+  }
+  #nav-bar {
+    font-size: medium;
+  }
+  #nav-bar-nofix {
+    font-size: medium;
+  }
+  #image-banner {
+    top: initial !important;
+  }
+  #image-banner > img {
+    height: initial !important;
+  }
+  #nav {
+    width: 65% !important;
+  }
+  #aboutText {
+    left: 9em !important;
+    top: 1em !important;
+    font-size: x-small !important;
+  }
+}
+
+@media only screen and (max-width: 429px) and (min-width: 350px) {
+  #aboutme {
+    font-size: large;
+  }
+  #nav-bar {
+    font-size: small;
+  }
+  #nav-bar-nofix {
+    font-size: small;
+  }
+  #image-banner {
+    top: initial !important;
+  }
+  #image-banner > img {
+    height: initial !important;
+  }
+  #nav {
+    width: 65% !important;
+  }
+  #aboutText {
+    left: 6.5em !important;
+    top: 1em !important;
+    font-size: x-small !important;
+  }
+}
+@media only screen and (max-width: 349px) {
+  #aboutme {
+    font-size: large;
+  }
+  #nav-bar {
+    font-size: x-small;
+  }
+  #nav-bar-nofix {
+    font-size: x-small;
+  }
+  #image-banner {
+    top: initial !important;
+  }
+  #image-banner > img {
+    height: initial !important;
+  }
+  #nav {
+    width: 65%;
+  }
+  #aboutText {
+    left: 4em !important;
+    top: 1em !important;
+    font-size: xx-small !important;
+  }
+}
+/* end responsive design */
+
 html {
   scroll-behavior: smooth;
 }
@@ -47,98 +175,6 @@ body {
 }
 
 /* nav bar */
-/* nav bar */
-@media only screen and (min-width: 700px) {
-  #aboutme {
-    font-size: 2vw;
-  }
-  #nav-bar {
-    font-size: 16px;
-  }
-  #nav-bar-nofix {
-    font-size: 16px;
-  }
-  #nav {
-    width: 91% !important;
-  }
-}
-
-@media only screen and (max-width: 700px) and (min-width: 500px) {
-  #aboutme {
-    font-size: 2vw;
-  }
-  #nav-bar {
-    font-size: 16px;
-  }
-  #nav-bar-nofix {
-    font-size: 16px;
-  }
-  #nav {
-    width: 83% !important;
-  }
-}
-
-@media only screen and (max-width: 500px) and (min-width: 430px) {
-  #aboutme {
-    font-size: x-large;
-  }
-  #nav-bar {
-    font-size: medium;
-  }
-  #nav-bar-nofix {
-    font-size: medium;
-  }
-  #image-banner {
-    top: initial !important;
-  }
-  #image-banner > img {
-    height: initial !important;
-  }
-  #nav {
-    width: 65% !important;
-  }
-}
-
-@media only screen and (max-width: 429px) and (min-width: 350px) {
-  #aboutme {
-    font-size: large;
-  }
-  #nav-bar {
-    font-size: small;
-  }
-  #nav-bar-nofix {
-    font-size: small;
-  }
-  #image-banner {
-    top: initial !important;
-  }
-  #image-banner > img {
-    height: initial !important;
-  }
-  #nav {
-    width: 65% !important;
-  }
-}
-@media only screen and (max-width: 349px) {
-  #aboutme {
-    font-size: large;
-  }
-  #nav-bar {
-    font-size: x-small;
-  }
-  #nav-bar-nofix {
-    font-size: x-small;
-  }
-  #image-banner {
-    top: initial !important;
-  }
-  #image-banner > img {
-    height: initial !important;
-  }
-  #nav {
-    width: 65%;
-  }
-}
 
 #nav-bar {
   position: fixed;
@@ -237,7 +273,7 @@ body {
 }
 
 .image-banner > img {
-  transform: translateX(-5%) translateY(-5%);
+  transform: translateX(-5%) translateY(-2%);
 
   width: 110%;
   /* overflow: hidden; */
