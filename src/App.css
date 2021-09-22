@@ -237,7 +237,7 @@ body {
 }
 
 .image-banner > img {
-  transform: translateX(-5%);
+  transform: translateX(-5%) translateY(-5%);
 
   width: 110%;
   /* overflow: hidden; */
