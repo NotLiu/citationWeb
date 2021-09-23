@@ -1,10 +1,14 @@
 /* responsive design */
 /* nav bar */
+/* @media only screen and (min-width: px) { */
 
-@media only screen and (min-width: 850px) {
+@media only screen (max-width: 1200px) and (min-width: 850px) {
   #aboutText {
     left: 35% !important;
     top: 10% !important;
+  }
+  #nav {
+    width: 73% !important;
   }
 }
 
@@ -19,7 +23,7 @@
     font-size: 16px;
   }
   #nav {
-    width: 91% !important;
+    width: 70% !important;
   }
   #aboutText {
     left: 12em !important;
@@ -45,6 +49,9 @@
     left: 9.5em !important;
     top: 1em !important;
     font-size: small !important;
+  }
+  .postBannerPage {
+    padding-top: 4vh !important;
   }
 }
 
@@ -72,6 +79,9 @@
     top: 1em !important;
     font-size: x-small !important;
   }
+  .postBannerPage {
+    padding-top: 4vh !important;
+  }
 }
 
 @media only screen and (max-width: 429px) and (min-width: 350px) {
@@ -98,8 +108,14 @@
     top: 1em !important;
     font-size: x-small !important;
   }
+  .postBannerPage {
+    padding-top: 4vh !important;
+  }
 }
 @media only screen and (max-width: 349px) {
+  h1 {
+    font-size: 1.6em;
+  }
   #aboutme {
     font-size: large;
   }
@@ -122,6 +138,9 @@
     left: 4em !important;
     top: 1em !important;
     font-size: xx-small !important;
+  }
+  .postBannerPage {
+    padding-top: 2vh !important;
   }
 }
 /* end responsive design */
@@ -303,7 +322,7 @@ body {
   filter: none;
   z-index: 5;
 }
-#aboutPage > img {
+#aboutPage > picture > img {
   position: absolute;
   left: 0;
   width: 100%;
@@ -315,8 +334,8 @@ body {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  left: 24em;
-  top: 5em;
+  left: 35% !important;
+  top: 10% !important;
 }
 
 .aboutTextAlignL {
