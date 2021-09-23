@@ -8,12 +8,14 @@ export default function Credits() {
           <source
             media="(max-width:499px)"
             srcSet="./img/borders3-long.png"
+            alt="text border"
           ></source>
           <source
             media="(min-width:500px)"
             srcSet="./img/borders3.png"
+            alt="text border"
           ></source>
-          <img id="creditsImg" src="./img/borders3.png" />
+          <img id="creditsImg" src="./img/borders3.png" alt="text border" />
         </picture>
         <div id="aboutText">
           <h1 className="header">CREDITS</h1>

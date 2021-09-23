@@ -2,7 +2,7 @@
 /* nav bar */
 /* @media only screen and (min-width: px) { */
 
-@media only screen (max-width: 1200px) and (min-width: 850px) {
+@media only screen and (max-width: 1200px) and (min-width: 850px) {
   #aboutText {
     left: 35% !important;
     top: 10% !important;

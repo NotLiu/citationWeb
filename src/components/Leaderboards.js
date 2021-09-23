@@ -75,12 +75,14 @@ export default function Leaderboards({
           <source
             media="(max-width:499px)"
             srcSet="./img/borders2-long.png"
+            alt="text border"
           ></source>
           <source
             media="(min-width:500px)"
             srcSet="./img/borders2.png"
+            alt="text border"
           ></source>
-          <img id="leaderboardImg" src="./img/borders2.png" />
+          <img id="leaderboardImg" src="./img/borders2.png" alt="text border" />
         </picture>
 
         <div id="aboutText">
