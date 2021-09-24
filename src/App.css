@@ -75,7 +75,7 @@
     width: 65% !important;
   }
   #aboutText {
-    left: 9em !important;
+    left: 8em !important;
     top: 1em !important;
     font-size: x-small !important;
   }
@@ -334,8 +334,8 @@ body {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  left: 35% !important;
-  top: 10% !important;
+  left: 35%;
+  top: 10%;
 }
 
 .aboutTextAlignL {
