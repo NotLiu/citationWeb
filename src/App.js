@@ -1,11 +1,11 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Banner from "./components/Banner";
 import About from "./components/About";
 import Leaderboards from "./components/Leaderboards";
 import Credits from "./components/Credits";
 import React from "react";
-import ParallaxBG from "./components/Parallax";
+// import ParallaxBG from "./components/Parallax";
 
 function App() {
   const postRef = React.useRef(null);
