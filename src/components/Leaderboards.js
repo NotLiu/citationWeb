@@ -1,10 +1,11 @@
-import React from "react";
-import axios from "axios";
-import Select from "react-select";
+import React, {useEffect} from "react";
+
+// import axios from "axios";
+// import Select from "react-select";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, query, where} from 'firebase/firestore'
+import { getFirestore, getDocs, collection, query, where} from 'firebase/firestore'
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -27,14 +28,14 @@ console.log(analytics);
 
 const getAll = async db => {
   const dataRef = collection(db, 'citation-34f48-default-rtdb')
-
+  const q = query(db, where('objectives/beat the game/', '==', true))
+  const data = await getDocs(q)
+  data.map(item => {
+    console.log(item.id, ' => ', item.data())
+  })
 }
-export default function Leaderboards({
-  boardType,
-  setBoardType,
-  leaderboardList,
-  setLeaderboardList,
-}) {
+
+export default function Leaderboards() {
   // const boards = [
   //   { value: "Level_One", label: "Level One" },
   //   { value: "Level_Two", label: "Level Two" },
@@ -75,6 +76,10 @@ export default function Leaderboards({
   //   handleQuery("/api/" + boardType);
   // }
 
+  useEffect(() => {
+    getAll()
+  })
+
   return (
     <div>
       <div className="aboutPage">
@@ -99,10 +104,10 @@ export default function Leaderboards({
             onChange={handleBoardType}
             className="dropdown"
           ></Select> */}
-          <span className="aboutTextAlignL">
+          {/* <span className="aboutTextAlignL">
             <h3 className="aboutTextAlignL">{boardType}</h3>
             <ul id="dataList">{leaderboardList}</ul>
-          </span>
+          </span> */}
         </div>
       </div>
     </div>
