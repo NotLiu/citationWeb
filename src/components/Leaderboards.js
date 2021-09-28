@@ -71,7 +71,7 @@ export default function Leaderboards({
 
   return (
     <div>
-      <div id="aboutPage">
+      <div className="aboutPage">
         <picture>
           <source
             media="(max-width:499px)"

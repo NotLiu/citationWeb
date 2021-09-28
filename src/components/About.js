@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div>
       {/* <div className="pageDiv" id="image-banner-about" /> */}
-      <div id="aboutPage">
+      <div className="aboutPage">
         <picture>
           <source
             media="(max-width:499px)"

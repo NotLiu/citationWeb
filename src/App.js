@@ -8,14 +8,12 @@ import React from "react";
 // import ParallaxBG from "./components/Parallax";
 
 function App() {
-  const postRef = React.useRef(null);
+  const aboutRef = React.useRef(null);
+  const leaderRef = React.useRef(null);
+  const creditRef = React.useRef(null);
   const [page, setPage] = React.useState(<About />);
   const [boardType, setBoardType] = React.useState("Total");
   const [leaderboardList, setLeaderboardList] = React.useState([]);
-
-  function executeScroll() {
-    postRef.current.scrollIntoView();
-  }
 
   return (
     // <Router>
@@ -38,8 +36,7 @@ function App() {
             <button
               className="about-but"
               onClick={() => {
-                setPage(<About />);
-                executeScroll();
+                aboutRef.current.scrollIntoView();
               }}
             >
               ABOUT
@@ -49,8 +46,7 @@ function App() {
             <button
               className="about-but"
               onClick={() => {
-                setPage(<Credits />);
-                executeScroll();
+                creditRef.current.scrollIntoView();
               }}
             >
               CREDITS
@@ -60,15 +56,7 @@ function App() {
             <button
               className="about-but"
               onClick={() => {
-                setPage(
-                  <Leaderboards
-                    boardType={boardType}
-                    setBoardType={setBoardType}
-                    leaderboardList={leaderboardList}
-                    setLeaderboardList={setLeaderboardList}
-                  />
-                );
-                executeScroll();
+                leaderRef.current.scrollIntoView();
               }}
             >
               LEADERBOARDS
@@ -106,8 +94,23 @@ function App() {
             <Credits />
           </Route>
         </Switch> */}
-      <div className="postBannerPage" ref={postRef}>
-        {page}
+      <div className="postBannerPage">
+        <div ref={aboutRef} className="pages">
+          <About />
+        </div>
+        <div ref={creditRef} className="pages">
+          <Credits />
+        </div>
+        <div ref={leaderRef} className="pages">
+          <Leaderboards
+            boardType={boardType}
+            setBoardType={setBoardType}
+            leaderboardList={leaderboardList}
+            setLeaderboardList={setLeaderboardList}
+          />
+        </div>
+
+        {/* <Contact /> */}
       </div>
     </div>
     // </Router>
