@@ -11,9 +11,6 @@ function App() {
   const aboutRef = React.useRef(null);
   const leaderRef = React.useRef(null);
   const creditRef = React.useRef(null);
-  const [page, setPage] = React.useState(<About />);
-  const [boardType, setBoardType] = React.useState("Total");
-  const [leaderboardList, setLeaderboardList] = React.useState([]);
 
   return (
     // <Router>
@@ -102,12 +99,7 @@ function App() {
           <Credits />
         </div>
         <div ref={leaderRef} className="pages">
-          <Leaderboards
-            boardType={boardType}
-            setBoardType={setBoardType}
-            leaderboardList={leaderboardList}
-            setLeaderboardList={setLeaderboardList}
-          />
+          <Leaderboards />
         </div>
 
         {/* <Contact /> */}

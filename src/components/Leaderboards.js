@@ -1,6 +1,6 @@
 import React from "react";
-import axios from "axios";
-import Select from "react-select";
+// import axios from "axios";
+// import Select from "react-select";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -23,12 +23,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 console.log(analytics);
 
-export default function Leaderboards({
-  boardType,
-  setBoardType,
-  leaderboardList,
-  setLeaderboardList,
-}) {
+export default function Leaderboards() {
   // const boards = [
   //   { value: "Level_One", label: "Level One" },
   //   { value: "Level_Two", label: "Level Two" },
@@ -93,10 +88,10 @@ export default function Leaderboards({
             onChange={handleBoardType}
             className="dropdown"
           ></Select> */}
-          <span className="aboutTextAlignL">
+          {/* <span className="aboutTextAlignL">
             <h3 className="aboutTextAlignL">{boardType}</h3>
             <ul id="dataList">{leaderboardList}</ul>
-          </span>
+          </span> */}
         </div>
       </div>
     </div>
