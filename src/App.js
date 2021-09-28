@@ -59,7 +59,7 @@ function App() {
                 leaderRef.current.scrollIntoView();
               }}
             >
-              LEADERBOARDS
+              STATISTICS
             </button>
           </li>
           {/* <li>

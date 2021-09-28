@@ -3,12 +3,15 @@
 /* @media only screen and (min-width: px) { */
 
 @media only screen and (max-width: 1200px) and (min-width: 850px) {
-  #aboutText {
+  .aboutText {
     left: 35% !important;
     top: 10% !important;
   }
   #nav {
     width: 73% !important;
+  }
+  .aboutPage {
+    height: 70vh !important;
   }
 }
 
@@ -25,10 +28,13 @@
   #nav {
     width: 70% !important;
   }
-  #aboutText {
+  .aboutText {
     left: 12em !important;
     top: 1em !important;
     font-size: smaller !important;
+  }
+  .aboutPage {
+    height: 50vh !important;
   }
 }
 
@@ -45,13 +51,16 @@
   #nav {
     width: 83% !important;
   }
-  #aboutText {
+  .aboutText {
     left: 9.5em !important;
     top: 1em !important;
     font-size: small !important;
   }
   .postBannerPage {
     padding-top: 4vh !important;
+  }
+  .aboutPage {
+    height: 35vh !important;
   }
 }
 
@@ -74,13 +83,16 @@
   #nav {
     width: 65% !important;
   }
-  #aboutText {
+  .aboutText {
     left: 8em !important;
     top: 1em !important;
     font-size: x-small !important;
   }
   .postBannerPage {
     padding-top: 4vh !important;
+  }
+  .aboutPage {
+    height: 50vh !important;
   }
 }
 
@@ -103,13 +115,16 @@
   #nav {
     width: 65% !important;
   }
-  #aboutText {
+  .aboutText {
     left: 6.5em !important;
     top: 1em !important;
     font-size: x-small !important;
   }
   .postBannerPage {
     padding-top: 4vh !important;
+  }
+  .aboutPage {
+    height: 50vh !important;
   }
 }
 @media only screen and (max-width: 349px) {
@@ -134,13 +149,16 @@
   #nav {
     width: 65%;
   }
-  #aboutText {
+  .aboutText {
     left: 4em !important;
     top: 1em !important;
     font-size: xx-small !important;
   }
   .postBannerPage {
     padding-top: 2vh !important;
+  }
+  .aboutPage {
+    height: 35vh !important;
   }
 }
 /* end responsive design */
@@ -311,7 +329,8 @@ body {
 .aboutPage {
   /* position: absolute; */
   position: relative;
-  display: block;
+  display: flex;
+  text-align-last: center;
   margin: 0 auto 8em;
   top: 0;
   width: 70vw;
@@ -322,19 +341,21 @@ body {
   filter: none;
   z-index: 5;
 }
-#aboutPage > picture > img {
+
+.aboutPage > picture > img {
   position: absolute;
   left: 0;
   width: 100%;
 }
 
-#aboutText {
+.aboutText {
   position: absolute;
   color: floralwhite;
   display: inline-flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  left: 35%;
+  left: 25em;
   top: 10%;
 }
 

@@ -18,7 +18,7 @@ export default function About() {
           ></source>
           <img id="aboutImg" src="./img/borders1.png" alt="text border" />
         </picture>
-        <div id="aboutText">
+        <div className="aboutText">
           <h1 className="header">ABOUT CITATION</h1>
           <span className="aboutTextAlignL">
             <h3 className="aboutTextAlignL">ABOUT Header</h3>

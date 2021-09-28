@@ -29,45 +29,45 @@ export default function Leaderboards({
   leaderboardList,
   setLeaderboardList,
 }) {
-  const boards = [
-    { value: "Level_One", label: "Level One" },
-    { value: "Level_Two", label: "Level Two" },
-    { value: "Level_Three", label: "Level Three" },
-    { value: "Total", label: "Total Score" },
-  ];
+  // const boards = [
+  //   { value: "Level_One", label: "Level One" },
+  //   { value: "Level_Two", label: "Level Two" },
+  //   { value: "Level_Three", label: "Level Three" },
+  //   { value: "Total", label: "Total Score" },
+  // ];
 
-  function handleQuery(query) {
-    console.log(query);
-    axios
-      .get(query, {
-        proxy: {
-          host: "localhost",
-          port: 8080,
-        },
-      })
-      .then(function (res) {
-        console.log(res.data);
-        console.log(res.data.board);
-        let board = res.data.board;
-        board = board.map((item, index) => {
-          return (
-            <li key={index} className="boardItem">
-              <span className="boardName">{item.netID}</span>
-              <span className="boardScore">{item.score}</span>
-            </li>
-          );
-        });
-        setLeaderboardList(board);
-      })
-      .catch(function (err) {
-        console.log(err);
-      });
-  }
+  // function handleQuery(query) {
+  //   console.log(query);
+  //   axios
+  //     .get(query, {
+  //       proxy: {
+  //         host: "localhost",
+  //         port: 8080,
+  //       },
+  //     })
+  //     .then(function (res) {
+  //       console.log(res.data);
+  //       console.log(res.data.board);
+  //       let board = res.data.board;
+  //       board = board.map((item, index) => {
+  //         return (
+  //           <li key={index} className="boardItem">
+  //             <span className="boardName">{item.netID}</span>
+  //             <span className="boardScore">{item.score}</span>
+  //           </li>
+  //         );
+  //       });
+  //       setLeaderboardList(board);
+  //     })
+  //     .catch(function (err) {
+  //       console.log(err);
+  //     });
+  // }
 
-  function handleBoardType(e) {
-    setBoardType(e.value);
-    handleQuery("/api/" + boardType);
-  }
+  // function handleBoardType(e) {
+  //   setBoardType(e.value);
+  //   handleQuery("/api/" + boardType);
+  // }
 
   return (
     <div>
@@ -86,13 +86,13 @@ export default function Leaderboards({
           <img id="leaderboardImg" src="./img/borders2.png" alt="text border" />
         </picture>
 
-        <div id="aboutText">
-          <h1 className="header">LEADERBOARDS</h1>
-          <Select
+        <div className="aboutText">
+          <h1 className="header">STATISTICS</h1>
+          {/* <Select
             options={boards}
             onChange={handleBoardType}
             className="dropdown"
-          ></Select>
+          ></Select> */}
           <span className="aboutTextAlignL">
             <h3 className="aboutTextAlignL">{boardType}</h3>
             <ul id="dataList">{leaderboardList}</ul>

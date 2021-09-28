@@ -17,7 +17,7 @@ export default function Credits() {
           ></source>
           <img id="creditsImg" src="./img/borders3.png" alt="text border" />
         </picture>
-        <div id="aboutText">
+        <div className="aboutText">
           <h1 className="header">CREDITS</h1>
           <span className="aboutTextAlignL">
             <h3 className="aboutTextAlignL">TEAM</h3>
