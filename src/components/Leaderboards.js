@@ -5,8 +5,7 @@ import React, {useEffect} from "react";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore, getDocs, collection, query, where} from 'firebase/firestore'
-
+import { getDatabase, ref, get } from 'firebase/database'
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -23,16 +22,16 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const db = getFirestore(app)
-console.log(analytics);
+const db = getDatabase()
+const db_string = 'citation-34f48-default-rtdb'
 
 const getAll = async db => {
-  const dataRef = collection(db, 'citation-34f48-default-rtdb')
-  const q = query(db, where('objectives/beat the game/', '==', true))
-  const data = await getDocs(q)
-  data.map(item => {
-    console.log(item.id, ' => ', item.data())
-  })
+  const dataRef = ref(db)
+  await get(dataRef)
+    .then(data => {
+      data.forEach(item => console.log(item.val()))
+     
+    })
 }
 
 export default function Leaderboards() {
@@ -77,7 +76,7 @@ export default function Leaderboards() {
   // }
 
   useEffect(() => {
-    getAll()
+    getAll(db)
   })
 
   return (
