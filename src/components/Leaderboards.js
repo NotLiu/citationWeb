@@ -1,11 +1,11 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 // import axios from "axios";
 // import Select from "react-select";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, get } from 'firebase/database'
+import { getDatabase, ref, get } from "firebase/database";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -22,17 +22,16 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const db = getDatabase()
-const db_string = 'citation-34f48-default-rtdb'
+console.log(analytics);
+const db = getDatabase();
+// const db_string = 'citation-34f48-default-rtdb'
 
-const getAll = async db => {
-  const dataRef = ref(db)
-  await get(dataRef)
-    .then(data => {
-      data.forEach(item => console.log(item.val()))
-     
-    })
-}
+const getAll = async (db) => {
+  const dataRef = ref(db);
+  await get(dataRef).then((data) => {
+    data.forEach((item) => console.log(item.val()));
+  });
+};
 
 export default function Leaderboards() {
   // const boards = [
@@ -76,8 +75,8 @@ export default function Leaderboards() {
   // }
 
   useEffect(() => {
-    getAll(db)
-  })
+    getAll(db);
+  });
 
   return (
     <div>
