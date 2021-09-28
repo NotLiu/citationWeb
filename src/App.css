@@ -4,8 +4,7 @@
 
 @media only screen and (max-width: 1200px) and (min-width: 850px) {
   .aboutText {
-    left: 35% !important;
-    top: 10% !important;
+    margin-top: 3% !important;
   }
   #nav {
     width: 73% !important;
@@ -29,8 +28,7 @@
     width: 70% !important;
   }
   .aboutText {
-    left: 12em !important;
-    top: 1em !important;
+    margin-top: 3em !important;
     font-size: smaller !important;
   }
   .aboutPage {
@@ -52,8 +50,7 @@
     width: 83% !important;
   }
   .aboutText {
-    left: 9.5em !important;
-    top: 1em !important;
+    margin-top: 2em !important;
     font-size: small !important;
   }
   .postBannerPage {
@@ -84,8 +81,7 @@
     width: 65% !important;
   }
   .aboutText {
-    left: 8em !important;
-    top: 1em !important;
+    margin-top: 1em !important;
     font-size: x-small !important;
   }
   .postBannerPage {
@@ -116,8 +112,7 @@
     width: 65% !important;
   }
   .aboutText {
-    left: 6.5em !important;
-    top: 1em !important;
+    margin-top: 1em !important;
     font-size: x-small !important;
   }
   .postBannerPage {
@@ -150,8 +145,7 @@
     width: 65%;
   }
   .aboutText {
-    left: 4em !important;
-    top: 1em !important;
+    margin-top: 1em !important;
     font-size: xx-small !important;
   }
   .postBannerPage {
@@ -331,6 +325,7 @@ body {
   position: relative;
   display: flex;
   text-align-last: center;
+  justify-content: center;
   margin: 0 auto 8em;
   top: 0;
   width: 70vw;
@@ -355,8 +350,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  left: 25em;
-  top: 10%;
+  margin-top: 10%;
 }
 
 .aboutTextAlignL {
