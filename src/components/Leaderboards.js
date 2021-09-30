@@ -1,46 +1,5 @@
-import React, { useEffect, useState } from "react";
-
-// import axios from "axios";
-// import Select from "react-select";
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, get } from "firebase/database";
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyCTOankLa189x7qD_b8iIxETPefX_a-yeU",
-  authDomain: "citation-34f48.firebaseapp.com",
-  databaseURL: "https://citation-34f48-default-rtdb.firebaseio.com",
-  projectId: "citation-34f48",
-  storageBucket: "citation-34f48.appspot.com",
-  messagingSenderId: "1082271308226",
-  appId: "1:1082271308226:web:20420b71130671e1601e5b",
-  measurementId: "G-H7VLSVWSN6",
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-console.log(analytics);
-const db = getDatabase();
-// const db_string = 'citation-34f48-default-rtdb'
-
-const getAll = async (db) => {
-  const dataRef = ref(db);
-  await get(dataRef).then((data) => {
-    data.forEach((item) => console.log(item.val()));
-  });
-};
-
-const getCount = async (db) => {
-  const dataRef = ref(db);
-
-  return await get(dataRef).then((data) => {
-    // console.log(data.size);
-    return data.size;
-  });
-};
+import React, { useEffect, useState } from "react"
+import { getCount } from "../api/api"
 
 export default function Leaderboards() {
   const [numPlays, setNumPlays] = useState(0);
@@ -86,7 +45,7 @@ export default function Leaderboards() {
 
   useEffect(() => {
     // get number of plays to display
-    getCount(db).then((count) => {
+    getCount().then((count) => {
       setNumPlays(count);
     });
   });
