@@ -10,7 +10,7 @@
     width: 73% !important;
   }
   .aboutPage {
-    height: 70vh !important;
+    height: 80vh !important;
   }
 }
 
@@ -153,6 +153,9 @@
   }
   .aboutPage {
     height: 35vh !important;
+  }
+  .aboutTextAlignL {
+    padding-left: 2.5em;
   }
 }
 /* end responsive design */
@@ -351,10 +354,22 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 10%;
+  width: 80%;
 }
 
 .aboutTextAlignL {
-  text-align: left;
+  align-self: start;
+  width: 83%;
+}
+
+.statItem {
+  list-style: none;
+  text-align-last: left;
+}
+
+.statItemR {
+  align-self: flex-end;
+  float: right;
 }
 
 #leaderText {

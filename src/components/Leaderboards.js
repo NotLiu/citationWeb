@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // import axios from "axios";
 // import Select from "react-select";
@@ -33,7 +33,17 @@ const getAll = async (db) => {
   });
 };
 
+const getCount = async (db) => {
+  const dataRef = ref(db);
+
+  return await get(dataRef).then((data) => {
+    // console.log(data.size);
+    return data.size;
+  });
+};
+
 export default function Leaderboards() {
+  const [numPlays, setNumPlays] = useState(0);
   // const boards = [
   //   { value: "Level_One", label: "Level One" },
   //   { value: "Level_Two", label: "Level Two" },
@@ -75,7 +85,10 @@ export default function Leaderboards() {
   // }
 
   useEffect(() => {
-    getAll(db);
+    // get number of plays to display
+    getCount(db).then((count) => {
+      setNumPlays(count);
+    });
   });
 
   return (
@@ -102,10 +115,11 @@ export default function Leaderboards() {
             onChange={handleBoardType}
             className="dropdown"
           ></Select> */}
-          {/* <span className="aboutTextAlignL">
-            <h3 className="aboutTextAlignL">{boardType}</h3>
-            <ul id="dataList">{leaderboardList}</ul>
-          </span> */}
+          <ul className="aboutTextAlignL">
+            <li className="statItem">
+              Number of Plays: <span className="statItemR">{numPlays}</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
