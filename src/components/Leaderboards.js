@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react"
-import { getCount } from "../api/api"
+import React, { useEffect, useState } from "react";
+import { getCount, getBatDeaths } from "../api/api";
 
 export default function Leaderboards() {
   const [numPlays, setNumPlays] = useState(0);
@@ -47,6 +47,9 @@ export default function Leaderboards() {
     // get number of plays to display
     getCount().then((count) => {
       setNumPlays(count);
+    });
+    getBatDeaths().then((deaths) => {
+      console.log(deaths);
     });
   });
 

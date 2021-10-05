@@ -1,5 +1,6 @@
-import { db } from './index'
-import { ref, get } from '@firebase/database';
+import { db } from "./index";
+import { ref, get } from "@firebase/database";
+import { Database, onValue } from "firebase/database";
 
 export const getAll = async () => {
   const dataRef = ref(db);
@@ -13,5 +14,13 @@ export const getCount = async () => {
 
   return await get(dataRef).then((data) => {
     return data.size;
+  });
+};
+
+export const getBatDeaths = async () => {
+  const dataRef = ref(db, "meta/bat_deaths");
+  onValue(dataRef, (snapshot) => {
+    const data = snapshot.val();
+    return data;
   });
 };
