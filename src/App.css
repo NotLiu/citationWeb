@@ -1,6 +1,24 @@
 /* responsive design */
 /* nav bar */
 /* @media only screen and (min-width: px) { */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Neucha&family=Open+Sans:wght@300&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* extremely obscure audio selectors */
+
+audio::-webkit-media-controls-panel {
+  background: linear-gradient(to left, #b50088, #ff8a00);
+  outline: white;
+  outline-width: 10px;
+}
+
+audio::-webkit-media-controls-play-button {
+  color: white
+}
 
 @media only screen and (max-width: 1200px) and (min-width: 850px) {
   .aboutText {
@@ -10,7 +28,7 @@
     width: 73% !important;
   }
   .aboutPage {
-    height: 80vh !important;
+    height: 60vh !important;
   }
 }
 
@@ -50,6 +68,7 @@
     width: 83% !important;
   }
   .aboutText {
+    
     margin-top: 2em !important;
     font-size: small !important;
   }
@@ -358,7 +377,6 @@ body {
 }
 
 .aboutTextAlignL {
-  align-self: start;
   width: 83%;
 }
 
@@ -387,6 +405,7 @@ body {
 }
 
 .header {
+  font-family: 'Handlee', cursive;
   text-align: center;
 }
 

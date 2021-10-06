@@ -5,7 +5,30 @@ import About from "./components/About";
 import Leaderboards from "./components/Leaderboards";
 import Credits from "./components/Credits";
 import React from "react";
+import styled from 'styled-components';
 // import ParallaxBG from "./components/Parallax";
+
+const PlayButton = styled.button`
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 210px;
+  height: 60px;
+  background: transparent;
+  background-image: url(./img/play_button.png);
+  background-repeat: no-repeat;
+  background-size: 200px 55px;
+  border: none;
+  outline: none;
+
+    &:focus {
+        outline: none;
+    }
+
+`
 
 function App() {
   const aboutRef = React.useRef(null);
@@ -76,7 +99,15 @@ function App() {
             </li> */}
         </ul>
       </div>
+
       <Banner />
+      <PlayButton 
+          onClick={()=>window.open("http://citation-mechanics.s3-website-us-east-1.amazonaws.com/")} 
+          target="_blank"
+          onMouseEnter={() => {
+            console.log("mouse entered")
+          }}
+        />
       {/* <Switch>
           <Route exact path="/">
             <Banner />

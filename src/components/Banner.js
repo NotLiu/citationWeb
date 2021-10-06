@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Parallax from "parallax-js";
 import ReactAudioPlayer from "react-audio-player";
+import styled from 'styled-components';
 
 export default function Banner() {
   const sceneEl = useRef(null);
@@ -15,6 +16,8 @@ export default function Banner() {
 
     return () => parallaxInstance.disable();
   }, []);
+
+
 
   return (
     <div>
@@ -44,7 +47,7 @@ export default function Banner() {
           <img src="./img/citation4-cliff.png" alt="foreground cliff face" />
         </div>
       </div>
-      <div>
+
         <ReactAudioPlayer
           id="audio"
           src="./sound/menu.mp3"
@@ -53,8 +56,7 @@ export default function Banner() {
           volume={0.4}
         />
       </div>
-    </div>
-
+      
     // <div id="image-banner"></div>
   );
 }
