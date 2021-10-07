@@ -1,8 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { getCount, getBatDeaths } from "../api/api";
+import {
+  getBatDeaths,
+  getBooksRead,
+  getCheatersCaught,
+  getHiddenLevelsFound,
+  getPlayerCount,
+  getPlayerWins,
+  getTableFlips,
+  getTotalCitations,
+  getTotalCoffee,
+} from "../api/api";
 
 export default function Leaderboards() {
-  const [numPlays, setNumPlays] = useState(0);
+  const [batDeaths, setBatDeaths] = useState(0);
+  const [booksRead, setBooksRead] = useState(0);
+  const [cheatersCaught, setCheatersCaught] = useState(0);
+  const [hiddenLevelsFound, setHiddenLevelsFound] = useState(0);
+  const [playerCount, setPlayerCount] = useState(0);
+  const [playerWins, setPlayerWins] = useState(0);
+  const [tableFlips, setTableFlips] = useState(0);
+  const [totalCitations, setTotalCitations] = useState(0);
+  const [totalCoffee, setTotalCoffee] = useState(0);
   // const boards = [
   //   { value: "Level_One", label: "Level One" },
   //   { value: "Level_Two", label: "Level Two" },
@@ -45,13 +63,16 @@ export default function Leaderboards() {
 
   useEffect(() => {
     // get number of plays to display
-    getCount().then((count) => {
-      setNumPlays(count);
-    });
-    getBatDeaths().then((deaths) => {
-      console.log(deaths);
-    });
-  });
+    setPlayerCount(getPlayerCount());
+    setBatDeaths(getBatDeaths());
+    setBooksRead(getBooksRead());
+    setCheatersCaught(getCheatersCaught());
+    setHiddenLevelsFound(getHiddenLevelsFound());
+    setPlayerWins(getPlayerWins());
+    setTableFlips(getTableFlips());
+    setTotalCitations(getTotalCitations());
+    setTotalCoffee(getTotalCoffee());
+  }, []);
 
   return (
     <div>
@@ -79,7 +100,39 @@ export default function Leaderboards() {
           ></Select> */}
           <ul className="aboutTextAlignL">
             <li className="statItem">
-              Number of Plays: <span className="statItemR">{numPlays}</span>
+              Number of Plays: <span className="statItemR">{playerCount}</span>
+            </li>
+            <li className="statItem">
+              Number of Player Wins:
+              <span className="statItemR"> {playerWins}</span>
+            </li>
+            <li className="statItem">
+              Number of Table Flips:
+              <span className="statItemR"> {tableFlips}</span>
+            </li>
+            <li className="statItem">
+              Number of Total Citations:
+              <span className="statItemR"> {totalCitations}</span>
+            </li>
+            <li className="statItem">
+              Number of Hidden Levels Found:
+              <span className="statItemR"> {hiddenLevelsFound}</span>
+            </li>
+            <li className="statItem">
+              Number of Cheaters Caught:
+              <span className="statItemR"> {cheatersCaught}</span>
+            </li>
+            <li className="statItem">
+              Number of Bat Deaths:
+              <span className="statItemR"> {batDeaths}</span>
+            </li>
+            <li className="statItem">
+              Number of Books Read:
+              <span className="statItemR"> {booksRead}</span>
+            </li>
+            <li className="statItem">
+              Number of Total Coffees Poured:
+              <span className="statItemR"> {totalCoffee}</span>
             </li>
           </ul>
         </div>
