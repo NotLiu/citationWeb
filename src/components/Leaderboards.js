@@ -63,15 +63,69 @@ export default function Leaderboards() {
 
   useEffect(() => {
     // get number of plays to display
-    setPlayerCount(getPlayerCount());
-    setBatDeaths(getBatDeaths());
-    setBooksRead(getBooksRead());
-    setCheatersCaught(getCheatersCaught());
-    setHiddenLevelsFound(getHiddenLevelsFound());
-    setPlayerWins(getPlayerWins());
-    setTableFlips(getTableFlips());
-    setTotalCitations(getTotalCitations());
-    setTotalCoffee(getTotalCoffee());
+    getPlayerCount()
+      .then((data) => {
+        setPlayerCount(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    getBatDeaths()
+      .then((data) => {
+        setBatDeaths(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    getBooksRead()
+      .then((data) => {
+        setBooksRead(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    getCheatersCaught()
+      .then((data) => {
+        setCheatersCaught(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    getHiddenLevelsFound()
+      .then((data) => {
+        setHiddenLevelsFound(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    getPlayerWins()
+      .then((data) => {
+        setPlayerWins(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    getTableFlips()
+      .then((data) => {
+        setTableFlips(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    getTotalCitations()
+      .then((data) => {
+        setTotalCitations(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    getTotalCoffee()
+      .then((data) => {
+        setTotalCoffee(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
   return (

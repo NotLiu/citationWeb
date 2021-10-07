@@ -1,6 +1,6 @@
 import { db } from "./index";
 import { ref, get } from "@firebase/database";
-import { onValue } from "firebase/database";
+// import { onValue } from "firebase/database";
 
 export const getAll = async () => {
   const dataRef = ref(db);
@@ -9,92 +9,71 @@ export const getAll = async () => {
   });
 };
 
-export const getBatDeaths = () => {
+export const getBatDeaths = async () => {
   const dataRef = ref(db, "meta/player stats/bat deaths");
-  let data = null;
-  onValue(dataRef, (snapshot) => {
-    data = snapshot.val();
+  return await get(dataRef).then((data) => {
+    return data.val();
   });
-  console.log(data);
-  return data;
+  // onValue(dataRef, (snapshot) => {
+  //   console.log(snapshot);
+  //   console.log(snapshot.val());
+  //   data = snapshot.val();
+  // });
+  // return data;
 };
 
-export const getBooksRead = () => {
+export const getBooksRead = async () => {
   const dataRef = ref(db, "meta/player stats/books read");
-  let data = null;
-  onValue(dataRef, (snapshot) => {
-    data = snapshot.val();
+  return await get(dataRef).then((data) => {
+    return data.val();
   });
-  console.log(data);
-  return data;
 };
 
-export const getCheatersCaught = () => {
+export const getCheatersCaught = async () => {
   const dataRef = ref(db, "meta/player stats/cheaters caught");
-  let data = null;
-  onValue(dataRef, (snapshot) => {
-    data = snapshot.val();
+  return await get(dataRef).then((data) => {
+    return data.val();
   });
-  console.log(data);
-  return data;
 };
 
-export const getHiddenLevelsFound = () => {
+export const getHiddenLevelsFound = async () => {
   const dataRef = ref(db, "meta/player stats/hidden levels found");
-  let data = null;
-  onValue(dataRef, (snapshot) => {
-    data = snapshot.val();
+  return await get(dataRef).then((data) => {
+    return data.val();
   });
-  console.log(data);
-  return data;
 };
 
-export const getPlayerCount = () => {
+export const getPlayerCount = async () => {
   const dataRef = ref(db, "meta/player stats/player count");
-  let data = null;
-  onValue(dataRef, (snapshot) => {
-    data = snapshot.val();
+  return await get(dataRef).then((data) => {
+    return data.val();
   });
-  console.log(data);
-  return data;
 };
 
-export const getPlayerWins = () => {
+export const getPlayerWins = async () => {
   const dataRef = ref(db, "meta/player stats/player wins");
-  let data = null;
-  onValue(dataRef, (snapshot) => {
-    data = snapshot.val();
+  return await get(dataRef).then((data) => {
+    return data.val();
   });
-  console.log(data);
-  return data;
 };
 
-export const getTableFlips = () => {
+export const getTableFlips = async () => {
   const dataRef = ref(db, "meta/player stats/table flips");
-  let data = null;
-  onValue(dataRef, (snapshot) => {
-    data = snapshot.val();
+  return await get(dataRef).then((data) => {
+    return data.val();
   });
-  console.log(data);
-  return data;
 };
 
-export const getTotalCitations = () => {
+export const getTotalCitations = async () => {
   const dataRef = ref(db, "meta/player stats/total citations");
-  let data = null;
-  onValue(dataRef, (snapshot) => {
-    data = snapshot.val();
+  return await get(dataRef).then((data) => {
+    return data.val();
   });
-  console.log(data);
-  return data;
 };
 
-export const getTotalCoffee = () => {
+export const getTotalCoffee = async () => {
   const dataRef = ref(db, "meta/player stats/total coffee poured");
-  let data = null;
-  onValue(dataRef, (snapshot) => {
-    data = snapshot.val();
+  return await get(dataRef).then((data) => {
+    return data.val();
   });
-  console.log(data);
-  return data;
 };

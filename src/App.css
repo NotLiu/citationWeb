@@ -382,7 +382,7 @@ body {
 .statItem {
   list-style: none;
   text-align-last: left;
-  padding-bottom: 2em;
+  padding-bottom: 1.5em;
 }
 
 .statItemR {
